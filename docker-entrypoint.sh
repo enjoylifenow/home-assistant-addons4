@@ -26,6 +26,8 @@ export N8N_ENDPOINT_REST="$(jq --raw-output '.endpoint_rest // empty' $CONFIG_PA
 export N8N_ENDPOINT_WEBHOOK="$(jq --raw-output '.endpoint_webhook // empty' $CONFIG_PATH)"
 export N8N_ENDPOINT_WEBHOOK_TEST="$(jq --raw-output '.endpoint_webhook_test // empty' $CONFIG_PATH)"
 export N8N_ENDPOINT_WEBHOOK_WAIT="$(jq --raw-output '.endpoint_webhook_wait // empty' $CONFIG_PATH)"
+export N8N_LOG_LEVEL="$(jq --raw-output '.log_level // empty' $CONFIG_PATH)"
+export N8N_LOG_OUTPUT="$(jq --raw-output '.log_output // empty' $CONFIG_PATH)"
 
 
 if [ -z "${N8N_BASIC_AUTH_USER}" ] || [ -z "${N8N_BASIC_AUTH_ACTIVE}" ]; then

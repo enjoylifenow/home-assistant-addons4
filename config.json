@@ -1,6 +1,6 @@
 {
   "name": "Hass n8n",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "slug": "hass-n8n",
   "description": "Self host your n8n instance",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
@@ -29,7 +29,9 @@
     "endpoint_rest": "rest",
     "endpoint_webhook": "webhook",
     "endpoint_webhook_test": "webhook-test",	
-    "endpoint_webhook_wait": "webhook-waiting"	
+    "endpoint_webhook_wait": "webhook-waiting",
+	"log_level": "error",
+	"log_output": "console"
   },
   "schema": {
     "auth": "bool",
@@ -43,6 +45,8 @@
     "endpoint_rest": "str",
     "endpoint_webhook": "str",
     "endpoint_webhook_test": "str",
-    "endpoint_webhook_wait": "str"	
+    "endpoint_webhook_wait": "str",
+	"log_level": "str",
+	"log_output": "str"
   }
 }
