@@ -22,6 +22,10 @@ export N8N_SSL_CERT="/ssl/$(jq --raw-output '.certfile // empty' $CONFIG_PATH)"
 export N8N_SSL_KEY="/ssl/$(jq --raw-output '.keyfile // empty' $CONFIG_PATH)"
 export N8N_USER_FOLDER="${N8N_PATH}"
 export WEBHOOK_URL="$(jq --raw-output '.webhook_url // empty' $CONFIG_PATH)"
+export N8N_ENDPOINT_REST="$(jq --raw-output '.endpoint_rest // empty' $CONFIG_PATH)"
+export N8N_ENDPOINT_WEBHOOK="$(jq --raw-output '.endpoint_webhook // empty' $CONFIG_PATH)"
+export N8N_ENDPOINT_WEBHOOK_TEST="$(jq --raw-output '.endpoint_webhook_test // empty' $CONFIG_PATH)"
+export N8N_ENDPOINT_WEBHOOK_WAIT="$(jq --raw-output '.endpoint_webhook_wait // empty' $CONFIG_PATH)"
 
 
 if [ -z "${N8N_BASIC_AUTH_USER}" ] || [ -z "${N8N_BASIC_AUTH_ACTIVE}" ]; then
